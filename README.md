@@ -86,7 +86,7 @@ _**BlockBustler** MVP will be an easily searchable inventory of movies in stock 
 
 >Front-end application structure:
 
-[Component Tree](https://i.imgur.com/8huEGYe.png)
+[Component Tree](https://i.imgur.com/H6ShInP.png)
 
 #### Component Architecture
 
@@ -137,7 +137,7 @@ src
 
 #### ERD Model
 
-[ERD Sample](https://i.imgur.com/xXm8b2J.png)
+[ERD Sample](https://i.imgur.com/0ukANAF.png)
 <br>
 
 ***
