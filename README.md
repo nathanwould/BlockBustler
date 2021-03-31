@@ -28,33 +28,28 @@ After watching the Netflix Documentary _The Last BlockBuster_ I could not believ
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**BlockBustler** MVP will be an easily searchable inventory of movies in stock at BlockBuster. Intended for employees, after login users will be able to search for movies by title, director, or actors, check to see if it's in stock, and mark it rented or returned. To stay consistent with their current POS system, the application will be styled in the spirit of a DOS application._
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Full CRUD on front and back end with soft delete
+- Easily searchable movie inventory
+- Ability to mark movies as checked out or returned
+- Seed database with a large inventory of movies
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front-end framework for effeciently rendering single-page applications|
+|      React-router       | navigational component collection |
+|   Rails  | Framework for building database-backed web applications |
+| bcrypt | password-hashing service used to secure user information |
+|     jwt      | service allowing for secure transmission of json data |
 
 <br>
 
