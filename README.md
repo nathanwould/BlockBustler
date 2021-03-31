@@ -1,8 +1,6 @@
 # BlockBustler
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+Bringing BlockBuster's POS system into the 21st century so it can live out its golden years in dignity.
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -23,7 +21,7 @@
 
 ## Overview
 
-**BlockBustler** is an attempt to bring BlockBuster's POS system into the 21st century so it can live out its golden years in dignity. After watching the Netflix Documentary _The Last BlockBuster_ I could not believe the store's manager Sandi Harding had to keep a stock of dusty 20-year-old computers to scavenge for parts to keep the POS system running. It inspired me to rethink their system with modern technology that could be accessed from any modern computer or mobile device with internet access and wouldn't be so tethered to the equipment it was designed for.
+After watching the Netflix Documentary _The Last BlockBuster_ I could not believe the store's manager Sandi Harding had to keep a stock of dusty 20-year-old computers to scavenge for parts to keep the POS system running. It inspired me to rethink their system with modern technology that could be accessed from any modern computer or mobile device with internet access and wouldn't be so tethered to the equipment it was designed for.
 
 
 <br>
