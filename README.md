@@ -57,31 +57,27 @@ _**BlockBustler** MVP will be an easily searchable inventory of movies in stock 
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Landing Login Page](https://i.imgur.com/yjCcnE1.png)
 
-- Desktop Landing
+- Landing
 
-![Dummy Link](url)
+![Employee Registration](https://i.imgur.com/xpVnOwi.png)
 
-- Desktop Hero
+- New Employee Registration
 
-![Dummy Link](url)
+![Movies](https://i.imgur.com/zhOUpag.png)
 
-- Resource Index
+- Movies
 
-![Dummy Link](url)
+![Movie Details](https://i.imgur.com/cqueNZo.png)
 
-- Resource Show
+- Movie Details
 
-![Dummy Link](url)
+![Movie Form](https://i.imgur.com/PWztJ2G.png)
 
-- Tablet Resource Index
+- Movie Add/Edit
 
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
