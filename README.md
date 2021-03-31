@@ -91,19 +91,26 @@ _**BlockBustler** MVP will be an easily searchable inventory of movies in stock 
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
+      |__ Movie.jsx
+|__ containers/
+      |__ MovieContainer.jsx
+|__ layout/
       |__ Header.jsx
+      |__ Layout.jsx
+|__ screens/
+      |__ Login.jsx
+      |__ Movies.jsx
+      |__ MovieDetails.jsx
+      |__ AddMovie.jsx
+      |__ EditMovie.jsx
 |__ services/
+       |__ api-config.js
+       |__ auth.js
+       |__ search.js
 
 ```
 
