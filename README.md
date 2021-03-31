@@ -115,14 +115,21 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+| Component | Priority | Estimated Time | Actual Time |
+|---|---|---|---|
+| Rails DB creation |   H   | 2hr |   |
+| Creating Models and Schema |    H  | 2hrs | 
+| Seeding DB Data | H | 4hrs |
+| Testing DB Routes | H | 2hrs | 
+| Creating Front-End Application | H | 1hrs | 
+| Front-End File Structure | H | 4hrs |	
+| Integrating Back and Front Ends | H | 4hrs | 
+| Front-End Full Crud | H | 2hrs |
+| Testing Front-End | H | 2hrs |
+| Seeding Inventory with as many movies as possible | H | 6hrs |
+| CSS Styling | L | 6hrs | -
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
+|Total|	- | 35hrs |
 
 <br>
 
