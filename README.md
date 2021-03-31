@@ -127,8 +127,7 @@ src
 | Front-End Full Crud | H | 2hrs |
 | Testing Front-End | H | 2hrs |
 | Seeding Inventory with as many movies as possible | H | 6hrs |
-| CSS Styling | L | 6hrs | -
-
+| CSS Styling | L | 6hrs | 
 |Total|	- | 35hrs |
 
 <br>
