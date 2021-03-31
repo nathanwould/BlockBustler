@@ -58,31 +58,35 @@ _**BlockBustler** MVP will be an easily searchable inventory of movies in stock 
 #### Wireframes
 
 - Landing
+-
 ![Landing Login Page](https://i.imgur.com/yjCcnE1.png)
 
 - New Employee Registration
+- 
 ![Employee Registration](https://i.imgur.com/xpVnOwi.png)
 
 
 - Movies
+- 
 ![Movies](https://i.imgur.com/zhOUpag.png)
 
 
 - Movie Details
+- 
 ![Movie Details](https://i.imgur.com/cqueNZo.png)
 
 
 - Movie Add/Edit
+- 
 ![Movie Form](https://i.imgur.com/PWztJ2G.png)
-
 
 
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+>Front-end application structure:
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree](https://i.imgur.com/8huEGYe.png)
 
 #### Component Architecture
 
