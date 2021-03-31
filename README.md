@@ -124,7 +124,6 @@ src
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -139,7 +138,7 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Post MVP goals include movie categories, tracking the number in stock and checked out, along with rental lengths, and when they are due back, and adding criteria to flag movies as 'new releases'. A styling post-MVP goal is to add more elements to make the experience feel like using a DOS machine like primarily using arrow keys and tab to navigate the application.
 
 ***
 
