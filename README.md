@@ -57,26 +57,25 @@ _**BlockBustler** MVP will be an easily searchable inventory of movies in stock 
 
 #### Wireframes
 
-
+- Landing
 ![Landing Login Page](https://i.imgur.com/yjCcnE1.png)
 
-- Landing
-
+- New Employee Registration
 ![Employee Registration](https://i.imgur.com/xpVnOwi.png)
 
-- New Employee Registration
-
-![Movies](https://i.imgur.com/zhOUpag.png)
 
 - Movies
+![Movies](https://i.imgur.com/zhOUpag.png)
 
-![Movie Details](https://i.imgur.com/cqueNZo.png)
 
 - Movie Details
+![Movie Details](https://i.imgur.com/cqueNZo.png)
 
-![Movie Form](https://i.imgur.com/PWztJ2G.png)
 
 - Movie Add/Edit
+![Movie Form](https://i.imgur.com/PWztJ2G.png)
+
+
 
 
 #### Component Tree
