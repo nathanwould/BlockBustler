@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Director.destroy_all
+Actor.destroy_all
+Movie.destroy_all
+
+@andrewAdamson = Director.create!(name: 'Andrew Adamson')
+@vickyJenson = Director.create!(name: 'Vicky Jenson')
+
+@mikeMyers = Actor.create!(name: 'Mike Myers')
+@eddieMurphey = Actor.create!(name: 'Eddie Murphey')
+@cameronDiaz = Actor.create!(name: 'Cameron Diaz')
+@johnLithgow = Actor.create!(name: 'John Lithgow')
+
+@shrek = Movie.create!(title: 'Shrek', date: 2001, isAvailable: true)
+
+puts "#{Director.count} directors created!"
+puts "#{Actor.count} actors created!"
+puts "#{Movie.count} movies created!"

@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Authentication routes
+  post '/auth/login', to: 'authentication#login'
+  get '/auth/verify', to: 'authentication#verify'
+  resources :users, only: :create
+  # Movie CRUD routes
+  resources :movies
+  # Actor association route
+  # post '/movies/:movie/actors/:id', to: 'actors#add_actor'
+  # Director association routes
+  # post '/movies/:movie/directors/:id', to: 'directors@add_director'
 end
