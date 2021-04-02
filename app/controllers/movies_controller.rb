@@ -4,13 +4,12 @@ class MoviesController < ApplicationController
   # GET /movies
   def index
     @movies = Movie.all
-
     render json: @movies
   end
 
   # GET /movies/1
   def show
-    render json: @movie
+    render json: @movie, include: [:actors, :directors]
   end
 
   # POST /movies
@@ -46,6 +45,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:title, :date, :isAvailable, :director_id_id, :employee_id_id)
+      params.require(:movie).permit(:title, :date, :isAvailable, :user_id)
     end
 end

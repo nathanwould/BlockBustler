@@ -5,17 +5,8 @@ class DirectorsController < ApplicationController
     render json: @directors
   end
 
-  def create
-    @director = Director.new(director_params)
-# @director = Director.new(params[:director])
-    if @director.save
-      render json: @director, status: :created, location: @director
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
 
-  def add_director
+  def create
     @movie = movie.find(params[:movie_id])
     @director = Director.find(params[:id])
     if @director 

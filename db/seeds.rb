@@ -24,6 +24,7 @@ User.destroy_all
 @shrek = Movie.create!(title: 'Shrek', date: 2001, isAvailable: true, user: @user)
 
 @shrek.actors.push([@mikeMyers, @eddieMurphey, @cameronDiaz, @johnLithgow])
+@shrek.directors.push([@andrewAdamson, @vickyJenson])
 
 puts "#{Director.count} directors created!"
 puts "#{Actor.count} actors created!"
