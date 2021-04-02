@@ -9,6 +9,9 @@
 Director.destroy_all
 Actor.destroy_all
 Movie.destroy_all
+User.destroy_all
+
+@user = User.create!(employeeID: "Nathan", password: 'Nathanagain', isAdmin: true)
 
 @andrewAdamson = Director.create!(name: 'Andrew Adamson')
 @vickyJenson = Director.create!(name: 'Vicky Jenson')
@@ -18,7 +21,9 @@ Movie.destroy_all
 @cameronDiaz = Actor.create!(name: 'Cameron Diaz')
 @johnLithgow = Actor.create!(name: 'John Lithgow')
 
-@shrek = Movie.create!(title: 'Shrek', date: 2001, isAvailable: true)
+@shrek = Movie.create!(title: 'Shrek', date: 2001, isAvailable: true, user: @user)
+
+@shrek.actors.push([@mikeMyers, @eddieMurphey, @cameronDiaz, @johnLithgow])
 
 puts "#{Director.count} directors created!"
 puts "#{Actor.count} actors created!"

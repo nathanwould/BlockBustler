@@ -1,3 +1,4 @@
 class Director < ApplicationRecord
-  has_and_belongs_to_many :movies
+  has_many :directors_movie
+  has_many :movies, :through => :directors_movie
 end

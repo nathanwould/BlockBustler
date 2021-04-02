@@ -6,13 +6,14 @@ class ActorsController < ApplicationController
   end
 
   def add_actor
-    @actor = Actor.new(actor_params)
-
-    if @actor.save
-      render json: @actor, status: :created, location: @actor
+    @movie = movie.find(params[:movie_id])
+    @actor = Actor.find(params[:id])
+    if @actor 
+      @movie.actors.push(@actor)
     else
-      render json: @actor.errors, status: :unprocessable_entity
+    @actor = Actor.new(actor_params)
     end
+    render json: @movie, include :actors
   end
 
 end

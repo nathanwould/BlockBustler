@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Movie CRUD routes
   resources :movies
   # Actor association route
-  # post '/movies/:movie/actors/:id', to: 'actors#add_actor'
+  post '/movies/:movie_id/actors/:id', to: 'actors#add_actor'
   # Director association routes
-  # post '/movies/:movie/directors/:id', to: 'directors@add_director'
+  post '/movies/:movie_id/directors/:id', to: 'directors#add_director'
 end
