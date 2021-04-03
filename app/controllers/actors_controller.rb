@@ -12,20 +12,28 @@ class ActorsController < ApplicationController
     # if @actor
       # @movie.actors.push(@actor)
     # else
+    # end
+    # render json: @movie, include :actors
     @actor = Actor.new(actor_params)
     if @actor.save
       render json: @actor, status: :created
     else
       render json: @actor.errors, status: :unprocessable_entity
-    # end
-    # render json: @movie, include :actors
   end
+
+  def add_actor
+    @movie = Movie.find(params[:movie_id])
+    @actor = Actor.find(params[:id])
+    @movie.actors << @actor
+    render json: @movie, include: :actors
+  end
+
 end
 
-  private
+private
 
   def actor_params
-  params.require(:actor).permit(:name, :movie_id)
+    params.require(:actor).permit(:name, :movie_id)
   end
 
 

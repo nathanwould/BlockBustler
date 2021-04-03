@@ -17,4 +17,17 @@ class DirectorsController < ApplicationController
     render json: @movie, include :directors
   end
   
+  def add_director
+    @movie = Movie.find(params[:movie_id])
+    @director = Director.find(params[:id])
+    @movie.director << @director
+    render json: @movie, include: :directors
+  end
+
+private
+
+  def actor_params
+    params.require(:actor).permit(:name, :movie_id)
+  end
+
 end
