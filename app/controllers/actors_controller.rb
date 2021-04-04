@@ -19,6 +19,7 @@ class ActorsController < ApplicationController
       render json: @actor, status: :created
     else
       render json: @actor.errors, status: :unprocessable_entity
+    end
   end
 
   def add_actor
@@ -28,7 +29,6 @@ class ActorsController < ApplicationController
     render json: @movie, include: :actors
   end
 
-end
 
 private
 

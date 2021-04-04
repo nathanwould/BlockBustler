@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /movies
   def index
@@ -14,8 +15,16 @@ class MoviesController < ApplicationController
 
   # POST /movies
   def create
-    @movie = Movie.new(movie_params)
-    # @movie.user = @current_user
+    @movie = Movie.new(movie_params.except(:actors, :directors))
+    @actors = movie_params[:actors].map do |actor|
+      Actor.find_or_create_by(name: actor[:name])
+    end
+    @directors = movie_params[:directors].map do |director|
+      Director.find_or_create_by(name: director[:name])
+    end
+    @movie.actors = @actors
+    @movie.directors = @directors
+    @movie.user = @current_user
     if @movie.save
       render json: @movie, status: :created, location: @movie
     else
@@ -45,6 +54,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:title, :date, :isAvailable, :user_id)
+      params.require(:movie).permit(:title, :date, :isAvailable, :user_id, actors:[:name], directors:[:name])
     end
 end
