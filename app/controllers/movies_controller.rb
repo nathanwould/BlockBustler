@@ -34,8 +34,19 @@ class MoviesController < ApplicationController
 
   # PATCH/PUT /movies/1
   def update
+    @movie = Movie.find(params[:id])
+    @movie.update(movie_params.except(:actors, :directors))
+    @actors = movie_params[:actors].map do |actor|
+      Actor.find_or_create_by(name: actor[:name])
+    end
+    @directors = movie_params[:directors].map do |director|
+      Director.find_or_create_by(name: director[:name])
+    end
+    @movie.actors = @actors
+    @movie.directors = @directors
+    @movie.user = @current_user
     if @movie.update(movie_params)
-      render json: @movie
+      render json: @movie, status: :updated, location: @movie
     else
       render json: @movie.errors, status: :unprocessable_entity
     end
