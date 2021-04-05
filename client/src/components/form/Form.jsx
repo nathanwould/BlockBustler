@@ -7,7 +7,7 @@ export default function Form(props) {
     title: '',
     date: '',
     isAvailable: true,
-    directors: [],
+    directors: ['', '', ''],
     actors: []
   });
   const { title, date, directors, actors } = formData
@@ -31,7 +31,7 @@ export default function Form(props) {
         actors: movie.actors
       })
     }
-    if (movies.length) {
+    if (movies?.length) {
       prefillFormData()
     }
   }, [movies, id])
