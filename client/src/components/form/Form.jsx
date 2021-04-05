@@ -42,14 +42,35 @@ export default function Form(props) {
         {name: directorInput}
       ]
     }))
-    setDirectorInput('')
+    setDirectorInput('');
   }
-
+  
+  const handleAddActor = (e) => {
+    e.preventDefault();
+    setFormData(prevState => ({
+      ...prevState,
+      actors: [
+        ...prevState.actors,
+        {name: actorInput}
+      ]
+    }))
+    setActorInput('');
+  }
+  
   const handleRemoveDirector = (name) => {
     setFormData(prevState => ({
       ...prevState,
       directors: prevState.directors.filter(director => {
         return director.name !== name
+      })
+    }))
+  }
+
+  const handleRemoveActor = (name) => {
+    setFormData(prevState => ({
+      ...prevState,
+      actors: prevState.actors.filter(actor => {
+        return actor.name !== name
       })
     }))
   }
@@ -93,6 +114,7 @@ export default function Form(props) {
           onChange={handleChange}
         />
       </label>
+      <label>Directed By:
       {formData.directors.map((director, index) => (
         <div key={index}>
           <p>{director.name}</p>
@@ -104,7 +126,6 @@ export default function Form(props) {
           >-</button>
         </div>
       ))}
-      <label>Directors:
         <input
           type='text'
           name='directors'
@@ -116,14 +137,27 @@ export default function Form(props) {
       onClick={handleAddDirector}
       >+</button>
       <label>Starring:
+      {formData.actors.map((actor, index) => (
+        <div key={index}>
+          <p>{actor.name}</p>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              handleRemoveActor(actor.name)
+          }}
+          >-</button>
+        </div>
+      ))}
         <input
           type='text'
           name='actors'
-          value={actors}
+          value={actorInput}
           onChange={handleActorChange}
         />
       </label>
-      <button>+</button>
+      <button
+      onClick={handleAddActor}
+      >+</button>
       <button>Submit</button>
     </form>
   )

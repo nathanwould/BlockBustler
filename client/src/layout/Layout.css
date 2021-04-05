@@ -1,3 +1,15 @@
+* {
+  background-color: #3D6BD3;
+}
+
+header {
+  display: flex;
+}
+
+a, p, h3, h4 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -5,4 +17,9 @@ a {
 
 #logo {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #1030AD;
+  -webkit-text-stroke-color: #1030AD;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-fill-color: #FFDB00;
+  font-size: 48px;
 }
