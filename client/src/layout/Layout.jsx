@@ -5,22 +5,19 @@ export default function Layout(props) {
   return (
     <div>
       <header>
-        <Link to='/'><h1>BlockBustler</h1></Link>
+        <Link to='/' id='logo'><h1>BlockBustler</h1></Link>
         {
           currentUser ?
             <>
-              <p>{currentUser.username}</p>
+              <p>{currentUser.employeeID}</p>
+              <Link to='/movies'>Movies</Link>  
               <button onClick={handleLogout}>Sign Out</button>
             </>
             :
             <Link to='/sign-in'>Sign In/Register</Link>
         }
       </header>
-      {currentUser && (
-        <>
-          <Link to='/movies'>Movies</Link>  
-        </>
-      )}
+      <hr/>
       {props.children}
     </div>
   )

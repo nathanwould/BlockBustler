@@ -64,6 +64,7 @@ export default function MovieScreen(props) {
       <Route path='/movies'>
         <MovieContainer
           movies={movies}
+          setMovies={setMovies}
           handleDelete={handleDelete}
           currentUser={currentUser}
         />
