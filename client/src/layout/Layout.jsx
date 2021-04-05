@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import './Layout.css';
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <div>
       <header>
-        <Link to='/' id='logo'><h1>BlockBustler</h1></Link>
+        <Link to='/' id='logo'><h1>BLOCKBUSTLER</h1></Link>
         {
           currentUser ?
             <>
