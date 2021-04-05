@@ -13,7 +13,7 @@ export default function Movies(props) {
             <Link to={`/movies/${movie.id}`}>
               <p>{movie.title}</p>
               <p>{movie.date}</p>
-              <p>{movie.isAvailable}</p>
+              {movie.isAvailable ? <p>&#10003;</p> : <p>-</p>}
             </Link>
           </React.Fragment>
         ))
