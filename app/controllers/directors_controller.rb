@@ -14,7 +14,7 @@ class DirectorsController < ApplicationController
     else
     @director = Director.new(director_params)
     end
-    render json: @movie, include :directors
+    render json: @movie, include: :directors
   end
   
   def add_director
