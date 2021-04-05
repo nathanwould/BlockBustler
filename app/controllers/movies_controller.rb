@@ -5,11 +5,12 @@ class MoviesController < ApplicationController
   # GET /movies
   def index
     @movies = Movie.all
-    render json: @movies
+    render json: @movies, include: [:actors, :directors]
   end
 
   # GET /movies/1
   def show
+    set_movie
     render json: @movie, include: [:actors, :directors]
   end
 
@@ -34,7 +35,7 @@ class MoviesController < ApplicationController
 
   # PATCH/PUT /movies/1
   def update
-    @movie = Movie.find(params[:id])
+    set_movie
     @movie.update(movie_params.except(:actors, :directors))
     @actors = movie_params[:actors].map do |actor|
       Actor.find_or_create_by(name: actor[:name])
@@ -54,6 +55,7 @@ class MoviesController < ApplicationController
 
   # DELETE /movies/1
   def destroy
+    set_movie
     @movie.destroy
   end
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
 import Layout from './layout/Layout'
+import MovieScreen from './screens/moviescreen/MovieScreen';
 import SignIn from "./screens/signin/SignIn.jsx";
 import SignUp from "./screens/signup/SignUp.jsx";
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
@@ -49,7 +50,9 @@ function App() {
           <Route path='/sign-up'>
             <SignUp handleRegister={handleRegister}/>
           </Route>
-          <Route path='/'></Route>
+          <Route path='/'>
+            <MovieScreen />
+          </Route>
         </Switch>
 
       </Layout>
