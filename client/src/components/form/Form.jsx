@@ -21,20 +21,20 @@ export default function Form(props) {
     }))
   }
 
-  // useEffect(() => {
-  //   const prefillFormData = () => {
-  //     const movie = movies.find(movie => movie.id === Number(id));
-  //     setFormData({
-  //       title: movie.title,
-  //       date: movie.date,
-  //       directors: movie.directors,
-  //       actors: movie.actors
-  //     })
-  //   }
-  //   if (movies.length) {
-  //     prefillFormData()
-  //   }
-  // }, [movies, id])
+  useEffect(() => {
+    const prefillFormData = () => {
+      const movie = movies.find(movie => movie.id === Number(id));
+      setFormData({
+        title: movie.title,
+        date: movie.date,
+        directors: movie.directors,
+        actors: movie.actors
+      })
+    }
+    if (movies.length) {
+      prefillFormData()
+    }
+  }, [movies, id])
 
   return (
     <form onSubmit={(e) => {

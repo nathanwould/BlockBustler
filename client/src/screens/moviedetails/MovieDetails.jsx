@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getOneMovie } from '../../services/movies';
 
 export default function MovieDetails(props) {
@@ -34,7 +34,8 @@ export default function MovieDetails(props) {
       {movie?.actors.map(actor => (
         <li key={actor.id}>{actor.name}</li>
         ))}
-        </ul>
+      </ul>
+      <Link to={`/movies/${movie.id}/edit`}>Edit</Link>
     </div>
   )
 }
