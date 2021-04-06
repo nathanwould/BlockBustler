@@ -1,0 +1,17 @@
+.page-title {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.movie-table {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.movie-info {
+  display: flex;
+  flex-flow: row;
+  box-sizing: border-box;
+  list-style: none;
+}

@@ -6,19 +6,25 @@ export default function Layout(props) {
   return (
     <div>
       <header>
-        <Link to='/' id='logo'><h1>BLOCKBUSTLER</h1></Link>
+        <Link to='/' id='logo'><div>BLOCKBUSTLER</div></Link>
         {
           currentUser ?
-            <>
-              <p>{currentUser.employeeID}</p>
-              <Link to='/movies'>Movies</Link>  
-              <button onClick={handleLogout}>Sign Out</button>
-            </>
+            <div className="header-links">
+              <Link
+                className='primary-button'
+                to='/movies'>Movies</Link>
+              <button
+                onClick={handleLogout}
+                id="log-out"
+                className='secondary-button'
+              >Sign Out</button>
+            </div>
             :
+            <div className="header-links">
             <Link to='/sign-in'>Sign In/Register</Link>
+            </div>
         }
       </header>
-      <hr/>
       {props.children}
     </div>
   )

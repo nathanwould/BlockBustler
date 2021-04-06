@@ -1,6 +1,7 @@
 import Movies from '../movies/Movies.jsx';
 import { Link } from 'react-router-dom';
 import Search from '../search/Search';
+import './MovieContainer.css'
 
 export default function MovieContainer(props) {
   // const [queriedMovies, setQueriedMovies] = useState([]);
@@ -19,7 +20,10 @@ export default function MovieContainer(props) {
       <Movies
         movies={movies}
       />
-      <Link to='/movies/new'>Add Movie</Link>
+      <Link
+        to='/movies/new'
+        className='primary-button'
+      >Add Movie</Link>
     </div>
   )
 }

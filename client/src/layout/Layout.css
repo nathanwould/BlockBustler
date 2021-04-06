@@ -1,25 +1,52 @@
-* {
-  background-color: #3D6BD3;
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #1030AD;
 }
 
 header {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1030AD;
+  margin-bottom: 1rem;
 }
 
-a, p, h3, h4 {
-  font-family: 'IBM Plex Mono', monospace;
+.header-links {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.primary-button {
+  background-color:#FFDB00;
+  padding: 1rem;
+  margin: 0 .5rem;
+  border: 1px solid;
+  color: #1030AD;
+}
+
+.secondary-button {
+  background-color:#1030AD;
+  padding: 1rem;
+  margin: 0 .5rem;
+  /* border: 1px solid; */
+  color: #FFDB00;
+}
+
+#log-out {
+
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #1030AD;
 }
 
 #logo {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #1030AD;
-  -webkit-text-stroke-color: #1030AD;
-  -webkit-text-stroke-width: 6px;
-  -webkit-text-fill-color: #FFDB00;
-  font-size: 48px;
+  color: #FFDB00;
+  font-size: 64px;
+  margin: 0 24px;
 }
