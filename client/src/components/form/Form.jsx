@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './Form.css'
 
 export default function Form(props) {
   const { handleCreate, handleUpdate, movies } = props;
@@ -44,7 +45,7 @@ export default function Form(props) {
     }))
     setDirectorInput('');
   }
-  
+
   const handleAddActor = (e) => {
     e.preventDefault();
     setFormData(prevState => ({
@@ -91,14 +92,15 @@ export default function Form(props) {
   }, [movies, id])
 
   return (
-    <form onSubmit={(e) => {
+    <form 
+      className='movie-form'
+      onSubmit={(e) => {
       e.preventDefault();
       id ?
         handleUpdate(id, formData)
         : handleCreate(formData);
-    }}>
-      <h4>Add Movie</h4>
-      <label>Title:
+      }}>
+      <label className='field-container'>Title:
         <input
           type='text'
           name='title'
@@ -106,7 +108,7 @@ export default function Form(props) {
           onChange={handleChange}
         />
       </label>
-      <label>Year:
+      <label className='field-container'>Year:
         <input
           type='number'
           name='date'
@@ -114,7 +116,7 @@ export default function Form(props) {
           onChange={handleChange}
         />
       </label>
-      <label>Directed By:
+      <label className='field-container'>Directed By:
       {formData.directors.map((director, index) => (
         <div key={index}>
           <p>{director.name}</p>
@@ -123,7 +125,7 @@ export default function Form(props) {
               e.preventDefault();
               handleRemoveDirector(director.name)
           }}
-          >-</button>
+          >Remove</button>
         </div>
       ))}
         <input
@@ -132,11 +134,11 @@ export default function Form(props) {
           value={directorInput}
           onChange={handleDirectorChange}
         />
-      </label>
       <button
       onClick={handleAddDirector}
-      >+</button>
-      <label>Starring:
+      >Add Director</button>
+      </label>
+      <label className='field-container'>Starring:
       {formData.actors.map((actor, index) => (
         <div key={index}>
           <p>{actor.name}</p>
@@ -145,7 +147,7 @@ export default function Form(props) {
               e.preventDefault();
               handleRemoveActor(actor.name)
           }}
-          >-</button>
+          >Remove</button>
         </div>
       ))}
         <input
@@ -154,11 +156,11 @@ export default function Form(props) {
           value={actorInput}
           onChange={handleActorChange}
         />
-      </label>
       <button
       onClick={handleAddActor}
-      >+</button>
-      <button>Submit</button>
+      >Add Actor</button>
+      </label>
+      <button className='primary-button'>Save</button>
     </form>
   )
 }
