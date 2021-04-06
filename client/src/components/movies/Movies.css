@@ -3,15 +3,49 @@
   padding-left: 2rem;
 }
 
+.movie-header {
+  background-color: lightyellow;
+  padding-left: 2rem;
+}
+
+.search-form {
+  display: flex;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 33%;
+  padding: .5rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 .movie-table {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   flex-wrap: wrap;
+  padding-left: 2rem;
 }
 
 .movie-info {
   display: flex;
-  flex-flow: row;
+  align-items: center;
   box-sizing: border-box;
   list-style: none;
+}
+
+.movie-title {
+  font-weight: bold;
+}
+
+.movie-date {
+  left: 25%;
+}
+
+.table-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
 }
