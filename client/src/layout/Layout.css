@@ -27,12 +27,24 @@ header {
   color: #1030AD;
 }
 
+.primary-button:hover {
+  background-color: #1030AD;
+  border: 2px solid;
+  color: #FFDB00;
+}
+
 .secondary-button {
   background-color:#1030AD;
   padding: 1rem;
   margin: 0 .5rem;
   font-family: 'IBM Plex Mono', monospace;
   color: #FFDB00;
+}
+
+.secondary-button:hover {
+  background-color: #FFDB00;
+  border: 2px solid;
+  color: #1030AD;
 }
 
 #log-out {
