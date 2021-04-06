@@ -24,10 +24,10 @@ export const destroyMovie = async (id) => {
   const resp = await api.delete(`/movies/${id}`)
 }
 
-export const checkOut = async (id) => {
-  const resp = await api.put(`/movies/${id}`, {isAvailable: false})
-}
+// export const checkOut = async (id, movieData) => {
+//   const resp = await api.put(`/movies/${id}`, {movie: movieData})
+// }
 
-export const returnMovie = async (id) => {
-  const resp = await api.put(`/movies/${id}`, {isAvailable: true})
-}
+// export const returnMovie = async (id, movieData) => {
+//   const resp = await api.put(`/movies/${id}`, {movie: movieData})
+// }

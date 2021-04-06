@@ -28,8 +28,13 @@ export default function MovieDetails(props) {
       <h2 className='movie-title'>{movie.title}</h2>
       <div className='clickybois'>
         {movie.isAvailable ?
-          <button className='primary-button'>Check Out</button>
-          :<button className='primary-button'>Return</button>
+            <button
+              className='primary-button'
+              // onClick={checkOut}
+            >Check Out</button>
+            : <button
+              className='primary-button'
+            >Return</button>
         }
         <Link
         className='secondary-button'
