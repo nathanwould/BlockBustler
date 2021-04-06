@@ -21,7 +21,9 @@ export default function Layout(props) {
             </div>
             :
             <div className="header-links">
-            <Link to='/sign-in'>Sign In/Register</Link>
+              <Link
+                className='primary-button'
+                to='/sign-in'>Sign In/Register</Link>
             </div>
         }
       </header>

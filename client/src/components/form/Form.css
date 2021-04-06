@@ -9,5 +9,18 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.actor-name, .director-name {
+  display: flex;
+  align-items: center;
+}
+
+.form-button {
+  margin-left: 1rem;
+}
+
+.add-button {
+  margin-top: .5rem;
 }

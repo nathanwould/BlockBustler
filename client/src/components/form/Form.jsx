@@ -118,9 +118,12 @@ export default function Form(props) {
       </label>
       <label className='field-container'>Directed By:
       {formData.directors.map((director, index) => (
-        <div key={index}>
+        <div
+          key={index}
+          className='director-name'>
           <p>{director.name}</p>
           <button
+            className='form-button'
             onClick={(e) => {
               e.preventDefault();
               handleRemoveDirector(director.name)
@@ -131,18 +134,23 @@ export default function Form(props) {
         <input
           type='text'
           name='directors'
+          placeholder="Try 'Ron Howard'..."
           value={directorInput}
           onChange={handleDirectorChange}
         />
-      <button
+        <button
+          className='add-button'
       onClick={handleAddDirector}
       >Add Director</button>
       </label>
       <label className='field-container'>Starring:
       {formData.actors.map((actor, index) => (
-        <div key={index}>
+        <div
+          className='actor-name'
+          key={index}>
           <p>{actor.name}</p>
           <button
+            className='form-button'
             onClick={(e) => {
               e.preventDefault();
               handleRemoveActor(actor.name)
@@ -153,14 +161,16 @@ export default function Form(props) {
         <input
           type='text'
           name='actors'
+          placeholder="Try 'Lupita Nyong'o'..."
           value={actorInput}
           onChange={handleActorChange}
         />
-      <button
-      onClick={handleAddActor}
-      >Add Actor</button>
-      </label>
-      <button className='primary-button'>Save</button>
+        <button
+          className='add-button'
+          onClick={handleAddActor}
+          >Add Actor</button>
+        </label>
+        <button className='primary-button'>Save</button>
     </form>
   )
 }
