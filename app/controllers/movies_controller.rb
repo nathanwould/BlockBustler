@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1
   def update
     set_movie
-    @movie.update(movie_params.except(:actors, :directors))
+    @movie.update(movie_params.except(:id, :actors, :directors, :created_at, :updated_at))
     @actors = movie_params[:actors].map do |actor|
       Actor.find_or_create_by(name: actor[:name])
     end
