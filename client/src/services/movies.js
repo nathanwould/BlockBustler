@@ -25,9 +25,9 @@ export const destroyMovie = async (id) => {
 }
 
 export const checkOut = async (id) => {
-  const resp = await api.put(`/movies/${id}`)
+  const resp = await api.put(`/movies/${id}`, {isAvailable: false})
 }
 
 export const returnMovie = async (id) => {
-  const resp = await api.put(`/movies/${id}`)
+  const resp = await api.put(`/movies/${id}`, {isAvailable: true})
 }
