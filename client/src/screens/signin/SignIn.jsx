@@ -24,6 +24,7 @@ export default function SignIn(props) {
       handleLogin(formData);
     }}>
       <h3>Login</h3>
+      <div className='form-field'>
       <label>
         Employee ID:
         <input
@@ -32,8 +33,10 @@ export default function SignIn(props) {
           value={employeeID}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        </div>
       <br />
+      <div className='form-field'>
       <label>
         Password:
         <input
@@ -42,9 +45,12 @@ export default function SignIn(props) {
           value={password}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        </div>
       <br />
       <Link to='/register'>Register</Link>
+      <br />
+      <br />
       <button>Submit</button>
     </form>
   )

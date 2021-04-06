@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getOneMovie } from '../../services/movies';
+import { getOneMovie, putMovie } from '../../services/movies';
 import './MovieDetails.css'
 
 export default function MovieDetails(props) {
   const [movie, setMovie] = useState(null);
+  const [movieData, setMovieData] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchMovie = async () => {
-      const movieData = await getOneMovie(id);
-      setMovie(movieData);
+      const resp = await getOneMovie(id);
+      setMovie(resp);
       setIsLoaded(true);
     }
     fetchMovie();
@@ -30,10 +31,19 @@ export default function MovieDetails(props) {
         {movie.isAvailable ?
             <button
               className='primary-button'
-              // onClick={checkOut}
+              onClick={(e) => {
+                movie.isAvailable = false;
+                setMovieData(movie)
+                putMovie(id, movie)
+            }}
             >Check Out</button>
             : <button
               className='primary-button'
+              onClick={(e) => {
+                movie.isAvailable = true;
+                setMovieData(movie)
+                putMovie(id, movie)
+            }}
             >Return</button>
         }
         <Link
