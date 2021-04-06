@@ -31,7 +31,7 @@ header {
   background-color:#1030AD;
   padding: 1rem;
   margin: 0 .5rem;
-  /* border: 1px solid; */
+  font-family: 'IBM Plex Mono', monospace;
   color: #FFDB00;
 }
 

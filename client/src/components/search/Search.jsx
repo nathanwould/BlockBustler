@@ -6,7 +6,7 @@ const Search = (props) => {
         value={props.value}
         onChange={(e) => props.handleSearch(e)}
         name="Search"
-        placeholder="Search"
+        placeholder="Try 'Frozen 2'..."
         type="text"
       />
     </form>

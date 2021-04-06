@@ -14,11 +14,17 @@ export default function Movies(props) {
   return (
     <div>
       <h2 className='page-title'>Movies</h2>
+      <div className='movie-services'>
       <Search
         className='search'
         movies={movies}
         handleSearch={handleSearch}
       />
+      <Link
+        to='/movies/new'
+        className='primary-button add-button'
+        >Add Movie</Link>
+        </div>
         <div className='movie-info movie-header'>
           <p className='table-cell'>Title</p>
           <p className='table-cell'>Release Date</p>
@@ -34,7 +40,7 @@ export default function Movies(props) {
               {movie.isAvailable ? <p className='movie-data table-cell'>&#10003;</p> : <p>-</p>}
             <Link
               to={`/movies/${movie.id}`}
-              className='movie-data table-cell'
+              className='movie-data table-cell view-details'
             >View Details</Link>
           </div>
         ))

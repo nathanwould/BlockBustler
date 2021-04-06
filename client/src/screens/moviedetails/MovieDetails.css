@@ -1,0 +1,26 @@
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+button {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie-date {
+  padding-left: 2rem;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0 0 0 2rem;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getOneMovie } from '../../services/movies';
+import './MovieDetails.css'
 
 export default function MovieDetails(props) {
   const [movie, setMovie] = useState(null);
@@ -23,19 +24,38 @@ export default function MovieDetails(props) {
 
   return (
     <div className='movie-details'>
-      <h4>{movie.title}</h4>
-      <h4>{movie.date}</h4>
-      <ul>Directed By:
+      <div className='top-div'>
+      <h2 className='movie-title'>{movie.title}</h2>
+      <div className='clickybois'>
+        {movie.isAvailable ?
+          <button className='primary-button'>Check Out</button>
+          :<button className='primary-button'>Return</button>
+        }
+        <Link
+        className='secondary-button'
+        to={`/movies/${movie.id}/edit`}
+        >Edit</Link>
+          </div>
+      </div>
+      <div className='bottom-div'>
+      <h4 className='movie-date'>{movie.date}</h4>
+      <ul className='directors-list'>Directed By:
       {movie?.directors.map(director => (
-        <li key={director.id}>{director.name}</li>
+        <li
+          className='director-name'
+          key={director.id}>
+          {director.name}</li>
       ))}
       </ul>
-      <ul>Starring:
+      <ul className='actors-list'>Starring:
       {movie?.actors.map(actor => (
-        <li key={actor.id}>{actor.name}</li>
+        <li
+          className='actor-name'
+          key={actor.id}>
+          {actor.name}</li>
         ))}
-      </ul>
-      <Link to={`/movies/${movie.id}/edit`}>Edit</Link>
+        </ul>
+        </div>
     </div>
   )
 }

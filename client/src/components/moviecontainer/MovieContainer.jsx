@@ -11,10 +11,6 @@ export default function MovieContainer(props) {
         movies={movies}
         setMovies={setMovies}
       />
-      <Link
-        to='/movies/new'
-        className='primary-button'
-      >Add Movie</Link>
     </div>
   )
 }

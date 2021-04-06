@@ -6,12 +6,20 @@
 .movie-header {
   background-color: lightyellow;
   padding-left: 2rem;
+  font-weight: bold;
+}
+
+.movie-services {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 2rem;
 }
 
 .search-form {
   display: flex;
+  width: 80%;
   padding-left: 2rem;
-  margin-bottom: 2rem;
 }
 
 .search-input {
@@ -48,4 +56,8 @@
   width: 100%;
   text-align: left;
   border-bottom: 1px solid lightgray;
+}
+
+.view-details {
+  text-decoration: underline;
 }
