@@ -31,18 +31,18 @@ export default function MovieDetails(props) {
         {movie.isAvailable ?
             <button
               className='primary-button'
-              onClick={(e) => {
+              onClick={() => {
                 movie.isAvailable = false;
                 setMovieData(movie)
-                putMovie(id, movie)
+                putMovie(id, movieData)
             }}
             >Check Out</button>
             : <button
               className='primary-button'
-              onClick={(e) => {
+              onClick={() => {
                 movie.isAvailable = true;
                 setMovieData(movie)
-                putMovie(id, movie)
+                putMovie(id, movieData)
             }}
             >Return</button>
         }
